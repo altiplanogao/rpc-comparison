@@ -1,0 +1,46 @@
+syntax = "proto3";
+package msgs;
+
+option java_package = "being.altiplano.example.protomsgs";
+
+message EchoIn {
+    string content = 1;
+    int32 times = 2;
+}
+
+message EchoOut {
+    string reply = 1;
+}
+
+message CountIn {
+    string content = 1;
+}
+
+message CountOut {
+    int32 length = 1;
+}
+
+message ReverseIn {
+    string content = 1;
+}
+
+message ReverseOut {
+    string reply = 1;
+}
+
+message UpperCastIn {
+    string content = 1;
+}
+
+message UpperCastOut {
+    string reply = 1;
+}
+
+message LowerCastIn {
+    string content = 1;
+}
+
+message LowerCastOut {
+    string reply = 1;
+}
+

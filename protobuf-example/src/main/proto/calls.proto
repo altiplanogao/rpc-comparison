@@ -1,0 +1,18 @@
+syntax = "proto3";
+import "msgs.proto";
+
+package example;
+option java_package = "being.altiplano.example.protorpc";
+
+service Asker {
+    rpc Echo (msgs.EchoIn) returns (msgs.EchoOut) {
+    }
+    rpc Count (msgs.CountIn) returns (msgs.CountOut) {
+    }
+    rpc Reverse (msgs.ReverseIn) returns (msgs.ReverseOut) {
+    }
+    rpc UpperCast (msgs.UpperCastIn) returns (msgs.UpperCastOut) {
+    }
+    rpc LowerCast (msgs.LowerCastIn) returns (msgs.LowerCastOut) {
+    }
+}

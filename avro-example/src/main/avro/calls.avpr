@@ -1,0 +1,80 @@
+{"namespace": "being.altiplano.example.avrorpc",
+ "protocol": "Asker",
+
+ "types": [
+     {"name": "EchoIn", "type": "record",
+      "fields": [
+          {"name": "content",   "type": "string"},
+          {"name": "times", "type": "int"}
+      ]
+     },
+     {"name": "EchoOut", "type": "record",
+      "fields": [
+        {"name": "reply",   "type": "string"}
+      ]
+     },
+     {"name": "CountIn", "type": "record",
+      "fields": [
+       {"name": "content", "type": "string"}
+      ]
+      },
+      {"name": "CountOut", "type": "record",
+      "fields": [
+        {"name": "length", "type": "int"}
+      ]
+      },
+      {"name": "ReverseIn", "type": "record",
+      "fields": [
+             {"name": "content", "type": "string"}
+      ]
+      },
+    {"name": "ReverseOut", "type": "record",
+    "fields": [
+        {"name": "reply", "type": "string"}
+      ]
+      },
+    {"name": "UpperCastIn", "type": "record",
+    "fields": [
+        {"name": "content", "type": "string"}
+      ]
+      },
+    {"name": "UpperCastOut", "type": "record",
+    "fields": [
+        {"name": "reply", "type": "string"}
+      ]
+      },
+    {"name": "LowerCastIn", "type": "record",
+    "fields": [
+        {"name": "content", "type": "string"}
+      ]
+     },
+    {"name": "LowerCastOut", "type": "record",
+    "fields": [
+        {"name": "reply", "type": "string"}
+      ]
+      }
+ ],
+
+ "messages": {
+     "echo": {
+         "request": [{"name": "message", "type": "EchoIn"}],
+         "response": "EchoOut"
+     },
+     "count": {
+         "request": [{"name": "message", "type": "CountIn"}],
+         "response": "CountOut"
+     },
+     "reverse": {
+         "request": [{"name": "message", "type": "ReverseIn"}],
+         "response": "ReverseOut"
+     },
+     "uppercast": {
+         "request": [{"name": "message", "type": "UpperCastIn"}],
+         "response": "UpperCastOut"
+     },
+     "lowercast": {
+         "request": [{"name": "message", "type": "LowerCastIn"}],
+         "response": "LowerCastOut"
+     }
+ }
+}

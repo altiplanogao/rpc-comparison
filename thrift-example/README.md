@@ -1,0 +1,1 @@
+https://dzone.com/articles/apache-thrift-quickstart
